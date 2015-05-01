@@ -1,0 +1,20 @@
+DRIVETRAIN LIGHTS
+For Omni: Omni Green
+For Traction: Stripes Green and White
+For 1st Gear: Steady Blue
+For Second Gear: Steady Green
+
+AUXILARY LIGHTS
+For Shooting: ColorRay Green
+For Loading: Pixelate Green
+For Shoot Ready: Strobes Blue 2 flashes
+
+BOTH
+For Disabled: FadePulse Green
+For Autonomous: Pixelate Alliance Color
+For Teleop: Low Intensity Steady Green
+
+OPTIONAL
+For Throttle: ThrottleBars
+For FPS: FieldPOS
+For Passing: Bounce

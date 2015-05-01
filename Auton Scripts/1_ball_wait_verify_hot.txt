@@ -1,0 +1,19 @@
+;roller command=1 secondBall=1
+setShooter pressure=43 command=1 punch=0
+wait time=3000
+drive coast=1 y=1
+drive coast=1 y=2
+jump type=1 condition=0 to=RIGHT_HOT negate=1
+;LEFT_HOT
+;roller command=0 secondBall=1
+drive coast=1 y=7.5 heading=-15
+driveAndShoot coast=0 y=13 heading=-15
+jump to=END
+:RIGHT_HOT
+;roller command=0 secondBall=1
+drive coast=1 y=7.5 heading=15
+driveAndShoot coast=0 y=13 heading=15
+:END
+setShooter command=0
+roller command=0
+wait

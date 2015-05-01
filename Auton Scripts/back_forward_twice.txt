@@ -1,0 +1,26 @@
+setShooter pressure=43 command=1
+setDrive omni=0 highGear=0
+;drive y=2 coast=1
+;drive y=6 heading=20 coast=1
+;drive y=8 heading=20
+drive y=2 coast=1
+drive y=4 coast=1
+drive y=6 coast=1
+drive y=8 coast=1
+drive y=6 coast=1
+drive y=4 coast=1
+drive y=2 coast=1
+drive y=0 coast=1
+drive y=-2 coast=1
+drive y=-4 coast=1
+drive y=-6 coast=1
+drive y=-8 coast=1
+drive y=-6 coast=1
+drive y=-4 coast=1
+drive y=-2 coast=1
+drive y=0 coast=1
+drive y=2 coast=1 heading=20
+drive y=4 coast=1 heading=20
+driveAndShoot y=8 coast=1 heading=40 pressure=43
+stopDrive
+wait

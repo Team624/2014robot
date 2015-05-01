@@ -1,0 +1,56 @@
+roller command=1 secondBall=1
+setShooter pressure=43 command=1 punch=0
+drive coast=1 y=1
+drive coast=1 y=2
+roller command=0 secondBall=1
+jump type=1 condition=0 to=RIGHT_HOT
+;LEFT_HOT
+;drive coast=1 y=1
+;drive coast=1 y=2
+;roller command=0 secondBall=1
+drive coast=0 y=12 heading=0
+resetEncoders
+drive heading=-10
+stopDrive
+manualShoot pressure=43
+roller command=1
+setShooter pressure=43 command=1 punch=0
+resetEncoders
+wait time=4000
+;drive y=-3 heading=20
+;wait time=1000
+;drive y=-2 heading=20
+;driveAndShoot y=0 heading=20 pressure=43
+;drive x=3 heading=-4 coast=1
+;driveAndShoot x=7 heading=-4 coast=0
+drive heading=15
+stopDrive
+manualShoot pressure=43
+jump to=END
+:RIGHT_HOT
+;drive coast=1 y=1
+;drive coast=1 y=2
+;roller command=0 secondBall=1
+drive y=12 heading=0
+resetEncoders
+drive heading=10
+stopDrive
+manualShoot pressure=43
+roller command=1
+setShooter pressure=43 command=1 punch=0
+resetEncoders
+wait time=4000
+;drive y=-3 heading=-20
+;wait time=1000
+;drive y=-2 heading=-20
+;driveAndShoot y=0 heading=-20 pressure=43
+;drive x=-3 heading=4 coast=1
+;driveAndShoot x=-7 heading=4 coast=0
+drive heading=-15
+stopDrive
+manualShoot pressure=43
+wait time=4000
+:END
+setShooter command=0
+roller command=0
+wait

@@ -1,0 +1,17 @@
+setShooter pressure=43 command=1 punch=0
+wait time=1000
+jump type=1 condition=1 to=LEFT_HOT
+;RIGHT_HOT
+;wait 3 more seconds (4 total)
+wait time=3000
+:LEFT_HOT
+drive coast=1 y=1
+drive coast=1 y=2
+drive coast=1 y=7.5
+driveAndShoot coast=0 y=13
+;END
+drive coast=1 y=2
+drive coast=1 y=1
+drive y=-2
+;drive y=-18
+wait

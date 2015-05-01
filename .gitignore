@@ -1,0 +1,6 @@
+#files ignored by git: (safe for labview)
+*.aliases
+*.lvlps
+crio_builds/*
+pc_builds/*
+build\ log.txt

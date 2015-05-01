@@ -1,0 +1,149 @@
+[
+  {
+    "name":"wait",
+    "id": 0,
+    "desc": "sleep for the specified duration",
+    "params": [
+      {"name":"time", "id":0,"desc":"wait duration (ms). (0 = forever)"}
+    ]
+  },
+  {
+    "name":"drive",
+    "id": 1,
+    "desc":"drive forward/backward for the specified distance, steering toward the specified angle",
+    "params" : [
+      {"name":"maxTime", "id":0,"desc":"time limit (ms). (0 = forever)"},
+      {"name":"y","id":1, "desc":"distance to drive (in feet) positive (+) is forwards, negative (-) is backwards  (Distances are from last encpder recet)"},
+      {"name":"heading", "id":2, "desc":"angle to steer toward while driving (clockwise is positive, 0 = drive straight)"},
+	  {"name":"x", "id":3, "desc":"omni left/right distance(feet) positive(+) is right, negative(-) is left"},
+	  {"name":"coast", "id":4, "desc":"coast through the endpoint (1=coast, 2=stop)"}
+    ]
+  },
+  {
+    "name":"roller",
+    "id": 2,
+    "desc":"sets roller command and continues immediately",
+    "params" : [
+    {"name":"maxTime", "id":0,"desc":"time limit (ms). (0 = forever)"},
+      {"name":"command", "id":1, "desc":"0=none 1=front 2=back 3=both"},
+      {"name":"secondBall", "id":2, "desc":"1=enabled"}
+    ]
+  },
+  {
+    "name":"visionShoot",
+    "id": 3,
+    "desc":"Steers towards the specified portion of the goal and shoots (if goal not found, spin towards 0",
+    "params" : [
+      {"name":"maxTime", "id":0,"desc":"time limit (ms). (0 = forever)"},
+      {"name":"target", "id":1, "desc": "left=0 right=1 closest=2"}
+    ]
+  },
+  {
+    "name":"manualShoot",
+    "id": 4,
+    "desc":"shoots the ball with the specified pressure",
+    "params" : [
+      {"name":"maxTime", "id":0,"desc":"time limit (ms). (0 = forever)"},
+      {"name":"pressure", "id":1,"desc": "shooter PSI"},
+	  {"name":"punch", "id":2, "desc":"punch the ball before shooting (0 = regular, 1 = punch)"}
+    ]
+  },
+  {
+    "name":"setXPID",
+    "id": 5,
+    "desc":"Sets the Omni Wheel Distance PID with the specific values (uses dashboard values by default)",
+    "params" : [
+      {"name":"p", "id":1,"desc": "Sets Proportional Gain"},
+      {"name":"i", "id":2,"desc":"Sets Integral Gain"},
+      {"name":"d", "id":3,"desc": "Sets Derivative Gain"},
+      {"name":"max","id":4,"desc": "Sets the Maximum Output"},
+      {"name":"min", "id":5,"desc":" Sets the Minimum Output"}
+    ]
+  },
+  {
+    "name":"setYPID",
+    "id": 6,
+    "desc":"Sets the forward/backward Distance PID with the specific values (uses dashboard values by default)",
+    "params" : [
+      {"name":"p", "id":1,"desc": "Sets Proportional Gain"},
+      {"name":"i", "id":2,"desc":"Sets Integral Gain"},
+      {"name":"d", "id":3,"desc": "Sets Derivative Gain"},
+      {"name":"max","id":4,"desc": "Sets the Maximum Output"},
+      {"name":"min", "id":5,"desc":" Sets the Minimum Output"}
+    ]
+  },
+  {
+    "name":"jump",
+    "id": 7,
+    "desc":"Transfers execution to the specified command index based on conditions",
+    "params" : [
+      {"name":"to", "id":1,"desc": "Command Index to go to"},
+      {"name":"type", "id":2,"desc":"0=unconditional 1=conditional 2=set interrupt AKA background conditional"},
+      {"name":"condition","id":3, "desc": "0 = right goal hot? 1=left goal hot? 2 = ball in shooter? 3 = auton almost half over? 4=ball found? 5=Ball Carried?"},
+	  {"name":"negate","id":4,"desc": "1=negate the condition"}
+    ]
+  },
+  {
+    "name":"driveToBall",
+    "id": 8,
+    "desc":"Drives towards closest ball (drives straight forward/backward if nothing found)",
+    "params" : [
+      {"name":"maxDistance", "id":1,"desc": "max distance (ft) to drive forward/backward"},
+      {"name":"direction", "id":2,"desc":"0=both 1=forward 2=backward"}
+    ]
+  },
+  {
+    "name":"resetEncoders",
+    "id": 9,
+    "desc":"Reset encoder distances to 0",
+    "params" : [
+    ]
+  },
+  {
+    "name":"resetGyro",
+    "id": 10,
+    "desc":"Reset gyro angle to 0",
+    "params" : [
+    ]
+  },
+  {
+    "name":"setShooter",
+    "id": 11,
+    "desc":"Set the shooter mode",
+    "params" : [
+      {"name":"pressure", "id":1,"desc": "pressure to shoot at in PSI"},
+      {"name":"command", "id":2,"desc":"0=stop 1=warmup 2=line-shoot"},
+	  {"name":"punch", "id":3, "desc":"punch the ball before shooting (0 = regular, 1 = punch)"}
+    ]
+  },
+  {
+    "name":"setDrive",
+    "id": 12,
+    "desc":"Set the drivetrain mode",
+    "params" : [
+      {"name":"omni", "id":1,"desc": "0=traction, 1=omni"},
+      {"name":"highGear", "id":2,"desc":"0=lowGear 1=highGear"}
+    ]
+  },
+  {
+    "name":"driveAndShoot",
+    "id": 13,
+    "desc":"drive forward/backward for the specified distance (steering toward the specified angle) AND shoot at the specified pressure",
+    "params" : [
+      {"name":"maxTime", "id":0,"desc":"time limit (ms). (0 = forever)"},
+      {"name":"y","id":1, "desc":"distance to drive (in feet) positive (+) is forwards, negative (-) is backwards  (Distances are from last encpder recet)"},
+      {"name":"heading", "id":2, "desc":"angle to steer toward while driving (clockwise is positive, 0 = drive straight)"},
+	  {"name":"x", "id":3, "desc":"omni left/right distance(feet) positive(+) is right, negative(-) is left"},
+	  {"name":"coast", "id":4, "desc":"coast through the endpoint (1=coast, 2=stop)"},
+	  {"name":"pressure", "id":5, "desc":"shooter PSI (usually 60 or 43)"},
+	  {"name":"punch", "id":6, "desc":"punch the ball before shooting (0 = regular, 1 = punch)"}
+    ]
+  },
+  {
+    "name":"stopDrive",
+    "id": 14,
+    "desc":"Stops the drivetrain",
+    "params" : [
+    ]
+  }
+]

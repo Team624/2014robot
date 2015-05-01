@@ -1,0 +1,9 @@
+drive x=-5 coast=1
+drive x=-10 coast=1
+drive x=-5 coast=1
+drive x=0 coast=1
+drive x=5 coast=1
+drive x=10 coast=1
+drive x=5 coast=1
+drive x=0 coast=1
+stopDrive

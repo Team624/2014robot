@@ -1,0 +1,14 @@
+WORKS
+Pixelate
+PixThree
+FadePulse
+Bounce
+Steady
+Rainbow
+Strobes
+Omni
+Scanner
+FieldPOS
+
+DOESNT WORK
+ColorRay

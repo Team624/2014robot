@@ -1,0 +1,21 @@
+roller command=1 secondBall=1
+setShooter pressure=43 command=1 punch=0
+wait time=1000
+drive coast=1 y=1
+drive coast=1 y=2
+roller command=0 secondBall=1
+drive coast=1 y=7.5 heading=0
+driveAndShoot coast=0 y=13 heading=0
+roller command=1
+setShooter pressure=43 command=1 punch=0
+;resetEncoders
+wait time=3000
+;wait longer (for shooter to retract)
+wait time=1250
+;drive x=3 heading=-4 coast=1
+;driveAndShoot x=7 heading=-4 coast=0
+manualShoot pressure=43 punch=0
+;END
+setShooter command=0
+roller command=0
+wait

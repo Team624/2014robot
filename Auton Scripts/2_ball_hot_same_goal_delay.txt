@@ -1,0 +1,32 @@
+roller command=1 secondBall=1
+setShooter pressure=43 command=1 punch=0
+wait time=1000
+drive coast=1 y=1
+drive coast=1 y=2
+roller command=0 secondBall=1
+jump type=1 condition=0 to=RIGHT_HOT
+;LEFT_HOT
+;go RIGHT now
+drive y=13 heading=15
+jump to=SECOND_BALL_READY
+:RIGHT_HOT
+;go LEFT now
+drive y=13 heading=-15
+:WAIT_FOR_SHOOT
+;set interrupt to goto shoot when auton is just about half over (condition 3)
+jump to=SHOOT condition=3 type=2
+wait 
+:SHOOT
+;shoot 1
+manualShoot pressure=43
+;load
+roller command=1 
+;set interrupt when shooter is loaded
+jump type=2 condition=2 to=SECOND_BALL_READY
+wait
+:SECOND_BALL_READY
+roller command=0
+manualShoot pressure=43
+setShooter command=0
+roller command=0
+wait

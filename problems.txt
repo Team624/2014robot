@@ -1,0 +1,7 @@
+Dont shoot unless ball detected by center IR
+
+Gears reversed ??
+Drivetrain mode for the dashboard
+PSI Read calibration
+
+Fieldcentric in Joystick
